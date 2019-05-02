@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photos Collection View Controller-->
+        <!--Photo Collection-->
         <scene sceneID="Gce-Ox-3B3">
             <objects>
                 <collectionViewController id="CiF-1j-6hs" customClass="PhotosCollectionViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,8 +65,12 @@
                             <outlet property="delegate" destination="CiF-1j-6hs" id="Ft8-1k-mri"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Fpk-W6-hrO">
-                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="CQv-Ld-8dv"/>
+                    <navigationItem key="navigationItem" title="Photo Collection" id="Fpk-W6-hrO">
+                        <barButtonItem key="leftBarButtonItem" title="Select Theme" id="CQv-Ld-8dv">
+                            <connections>
+                                <segue destination="QjQ-uJ-DYb" kind="presentation" id="wFl-cv-s8j"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xCR-Yl-zEn">
                             <connections>
                                 <segue destination="aBW-qb-ieM" kind="show" identifier="AddImage" id="A6P-rr-JgM"/>
@@ -78,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="500.00000000000006" y="126.5625"/>
         </scene>
-        <!--Title-->
+        <!--Save Photo-->
         <scene sceneID="rd8-W3-tgt">
             <objects>
                 <viewController id="aBW-qb-ieM" customClass="PhotoDetailViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,13 +91,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-D4-yBz">
-                                <rect key="frame" x="16" y="104" width="382" height="332"/>
+                                <rect key="frame" x="16" y="156" width="382" height="280"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="51S-Tf-AQW">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="256"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="204"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGh-AT-PxT">
-                                        <rect key="frame" x="0.0" y="264" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="212" width="382" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Add Photo"/>
                                         <connections>
@@ -101,7 +105,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCh-ui-O4k">
-                                        <rect key="frame" x="0.0" y="302" width="382" height="30"/>
+                                        <rect key="frame" x="0.0" y="250" width="382" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -121,7 +125,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YQe-be-ynl"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8aB-n4-tXg">
+                    <navigationItem key="navigationItem" title="Save Photo" id="8aB-n4-tXg">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="1UE-3N-Ff7">
                             <connections>
                                 <action selector="saveButtonTapped:" destination="aBW-qb-ieM" id="fb6-T9-dc1"/>
@@ -137,13 +141,67 @@
             </objects>
             <point key="canvasLocation" x="1191.304347826087" y="125.89285714285714"/>
         </scene>
+        <!--Theme Selection View Controller-->
+        <scene sceneID="hqN-JL-HNK">
+            <objects>
+                <viewController id="QjQ-uJ-DYb" customClass="ThemeSelectionViewController" customModule="PhotoCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xuw-yR-gdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="bJj-iA-4df">
+                                <rect key="frame" x="16" y="60" width="382" height="87.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the theme you want to use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3G-Rd-xYf">
+                                        <rect key="frame" x="25.5" y="0.0" width="331" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="129" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-Bf-Mh8">
+                                        <rect key="frame" x="80" y="53.5" width="222" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-8W-zcp">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <state key="normal" title="Dark"/>
+                                                <connections>
+                                                    <action selector="selectDarkThemeButtonTapped:" destination="QjQ-uJ-DYb" eventType="touchUpInside" id="LCa-FC-poW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcV-A0-1WN">
+                                                <rect key="frame" x="168" y="0.0" width="54" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <state key="normal" title="Purple"/>
+                                                <connections>
+                                                    <action selector="selectPurpleThemeButtonTapped:" destination="QjQ-uJ-DYb" eventType="touchUpInside" id="hcA-dq-aKr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bJj-iA-4df" firstAttribute="top" secondItem="x2N-6N-JrC" secondAttribute="top" constant="16" id="01N-zA-sye"/>
+                            <constraint firstItem="bJj-iA-4df" firstAttribute="leading" secondItem="x2N-6N-JrC" secondAttribute="leading" constant="16" id="AbA-mt-f4e"/>
+                            <constraint firstItem="x2N-6N-JrC" firstAttribute="trailing" secondItem="bJj-iA-4df" secondAttribute="trailing" constant="16" id="goF-CR-R52"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x2N-6N-JrC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jx-Qq-Odb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862.3188405797102" y="127.90178571428571"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="dcl-Vs-7Y8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e8m-JQ-tsm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X7q-WN-aBs">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="X7q-WN-aBs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

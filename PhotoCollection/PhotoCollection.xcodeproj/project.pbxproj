@@ -16,6 +16,7 @@
 		37FBC754227B8D4500A6C5A0 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC753227B8D4500A6C5A0 /* PhotosCollectionViewController.swift */; };
 		37FBC756227B8EFC00A6C5A0 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC755227B8EFC00A6C5A0 /* PhotosCollectionViewCell.swift */; };
 		37FBC758227B915600A6C5A0 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC757227B915600A6C5A0 /* PhotoDetailViewController.swift */; };
+		37FBC75A227B981400A6C5A0 /* ThemeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBC759227B981400A6C5A0 /* ThemeSelectionViewController.swift */; };
 		FF2E033B227B88840001D190 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E033A227B88840001D190 /* ThemeHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		37FBC753227B8D4500A6C5A0 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		37FBC755227B8EFC00A6C5A0 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		37FBC757227B915600A6C5A0 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		37FBC759227B981400A6C5A0 /* ThemeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectionViewController.swift; sourceTree = "<group>"; };
 		FF2E033A227B88840001D190 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				37FBC753227B8D4500A6C5A0 /* PhotosCollectionViewController.swift */,
 				37FBC755227B8EFC00A6C5A0 /* PhotosCollectionViewCell.swift */,
 				37FBC757227B915600A6C5A0 /* PhotoDetailViewController.swift */,
+				37FBC759227B981400A6C5A0 /* ThemeSelectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FBC74F227B82BB00A6C5A0 /* Photo.swift in Sources */,
+				37FBC75A227B981400A6C5A0 /* ThemeSelectionViewController.swift in Sources */,
 				37FBC751227B83A200A6C5A0 /* PhotoController.swift in Sources */,
 				37FBC73D227B823A00A6C5A0 /* AppDelegate.swift in Sources */,
 				37FBC758227B915600A6C5A0 /* PhotoDetailViewController.swift in Sources */,
