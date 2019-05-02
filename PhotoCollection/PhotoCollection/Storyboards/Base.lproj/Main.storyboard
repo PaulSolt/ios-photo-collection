@@ -19,40 +19,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PZy-Ir-wdA">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="200" height="220"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="nN3-5I-jCV" customClass="PhotosCollectionViewCell" customModule="PhotoCollection" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="120" height="140"/>
+                                <rect key="frame" x="107" y="8" width="200" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-Tq-EXX">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="103"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-32-56A">
-                                            <rect key="frame" x="8" y="111" width="104" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6F-YL-zE2">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FiP-ca-JEZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="220"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-32-56A">
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KlR-Tq-EXX">
+                                                            <rect key="frame" x="0.0" y="28.5" width="200" height="191.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="FiP-ca-JEZ" firstAttribute="leading" secondItem="b6F-YL-zE2" secondAttribute="leading" id="9bG-Va-4Pc"/>
+                                                <constraint firstAttribute="trailing" secondItem="FiP-ca-JEZ" secondAttribute="trailing" id="SJi-Eo-mCX"/>
+                                                <constraint firstAttribute="bottom" secondItem="FiP-ca-JEZ" secondAttribute="bottom" id="jvm-oG-Sdf"/>
+                                                <constraint firstItem="FiP-ca-JEZ" firstAttribute="top" secondItem="b6F-YL-zE2" secondAttribute="top" id="wFQ-FN-Avm"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="eKR-32-56A" secondAttribute="trailing" id="HJv-oZ-B7j"/>
-                                    <constraint firstAttribute="trailing" secondItem="KlR-Tq-EXX" secondAttribute="trailing" id="Sa0-cT-Swo"/>
-                                    <constraint firstItem="eKR-32-56A" firstAttribute="top" secondItem="KlR-Tq-EXX" secondAttribute="bottom" constant="8" id="TrI-HM-Xrp"/>
-                                    <constraint firstItem="KlR-Tq-EXX" firstAttribute="top" secondItem="nN3-5I-jCV" secondAttribute="top" id="UFi-Ak-vAL"/>
-                                    <constraint firstItem="KlR-Tq-EXX" firstAttribute="leading" secondItem="nN3-5I-jCV" secondAttribute="leading" id="hJA-Yy-GyQ"/>
-                                    <constraint firstItem="eKR-32-56A" firstAttribute="leading" secondItem="nN3-5I-jCV" secondAttribute="leadingMargin" id="rEK-ui-Xxy"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="eKR-32-56A" secondAttribute="bottom" id="xzS-Jt-C1x"/>
+                                    <constraint firstItem="b6F-YL-zE2" firstAttribute="leading" secondItem="nN3-5I-jCV" secondAttribute="leading" id="Em5-fV-Ufb"/>
+                                    <constraint firstAttribute="bottom" secondItem="b6F-YL-zE2" secondAttribute="bottom" id="IH6-0W-JhY"/>
+                                    <constraint firstItem="b6F-YL-zE2" firstAttribute="top" secondItem="nN3-5I-jCV" secondAttribute="top" id="f6e-24-uzm"/>
+                                    <constraint firstAttribute="trailing" secondItem="b6F-YL-zE2" secondAttribute="trailing" id="kXB-MH-RhN"/>
                                 </constraints>
-                                <size key="customSize" width="120" height="140"/>
+                                <size key="customSize" width="200" height="220"/>
                                 <connections>
                                     <outlet property="photoImageView" destination="KlR-Tq-EXX" id="cbd-ld-Fey"/>
                                     <outlet property="photoLabel" destination="eKR-32-56A" id="TAx-26-9Lj"/>
